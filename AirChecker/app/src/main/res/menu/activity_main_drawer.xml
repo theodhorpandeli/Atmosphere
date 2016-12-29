@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home_black_48dp"
+            android:title="Informacion" />
+        <item
+            android:id="@+id/temperatura"
+            android:icon="@drawable/ic_thermometer_black_48dp"
+            android:title="Temperatura" />
+        <item
+            android:id="@+id/radiacioni"
+            android:icon="@drawable/ic_radiation"
+            android:title="Radiacioni" />
+        <item
+            android:id="@+id/puhuri"
+            android:icon="@drawable/ic_dust"
+            android:title="Pluhuri" />
+        <item
+            android:id="@+id/zhurma"
+            android:icon="@drawable/ic_signal"
+            android:title="Zhurma" />
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/subscribe"
+            android:icon="@drawable/ic_notify"
+            android:title="Merr njoftime" />
+
+    </group>
+
+    <item android:title="Substanca">
+        <menu>
+            <item
+                android:id="@+id/amonium"
+                android:icon="@drawable/ic_nh3"
+                android:title="Amoniumi" />
+            <item
+                android:id="@+id/dioksidiAzotit"
+                android:icon="@drawable/ic_no2"
+                android:title="Dioksidi i Azotit" />
+            <item
+                android:id="@+id/dioksidiKarbonit"
+                android:icon="@drawable/ic_co2"
+                android:title="Dioksidi i Karbonit" />
+            <item
+                android:id="@+id/dioksidiSulfurit"
+                android:icon="@drawable/ic_so2"
+                android:title="Dioksidi i Sulfurit" />
+            <item
+                android:id="@+id/monoksidiKarbonit"
+                android:icon="@drawable/ic_co"
+                android:title="Monoksidi i Karbonit" />
+
+            <item
+                android:id="@+id/sulfuriHidrogjenit"
+                android:icon="@drawable/ic_h2s"
+                android:title="Sulfuri i Hidrogjenit" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/info"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="Info" />
+
+</menu>

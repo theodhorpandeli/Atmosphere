@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.theodhor.airchecker.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/swipeRefresh">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.theodhor.airchecker.MainActivity">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/weatherRelativeLayout">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cityCoverPhoto"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/img_10" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/weatherRelativeLayout"
+                            android:background="@drawable/weather_drawable"
+                            android:padding="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Clear"
+                                android:id="@+id/weatherText"
+                                android:textSize="20dp"
+                                android:textColor="@color/white"
+                                android:shadowColor="#000"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:layout_below="@+id/currentTemperature"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:alpha=".8" />
+
+                            <ImageView
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:id="@+id/weatherImage"
+                                android:src="@drawable/partly_cloudy_night"
+                                android:layout_marginLeft="5dp"
+                                android:shadowColor="#000"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:layout_alignParentStart="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14°C"
+                                android:id="@+id/currentTemperature"
+                                android:textSize="40sp"
+                                android:shadowRadius="2"
+                                android:textColor="@color/white"
+                                android:shadowColor="#000"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="false"
+                                android:layout_toRightOf="@+id/weatherImage"
+                                android:alpha=".8" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/city_drawable"
+                            android:paddingBottom="5dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Prishtina\n Qender"
+                                android:id="@+id/locationWeatherText"
+                                android:textSize="18sp"
+                                android:textColor="@color/white"
+                                android:shadowColor="#000"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:textAlignment="textStart" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/airQualityIndexL"
+                        android:layout_below="@+id/weatherRelativeLayout"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <View android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/circle"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/aqiView" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/aqiNumber"
+                            android:layout_centerInParent="true"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/informationLayout"
+                        android:layout_below="@+id/airQualityIndexL"
+                        android:padding="5dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nulla facilisi. Curabitur eu euismod eros. Sed sit amet pulvinar arcu. Donec vulputate pharetra augue sed tincidunt. Curabitur dictum dui dictum lacus tristique malesuada. Aliquam fermentum metus in tortor pretium hendrerit. Nulla libero odio.&quot;"
+                            android:id="@+id/informationText" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tabLayout"
+                        android:layout_below="@+id/informationLayout">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/resumeRcv"/>
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardView2"
+                        android:elevation="15dp"
+                        android:layout_margin="5dp"
+                        card_view:cardCornerRadius="10dp"
+                        android:padding="10dp"
+                        android:layout_below="@+id/tabLayout">
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:map="http://schemas.android.com/apk/res-auto"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:context="com.example.theodhor.airchecker.MainActivity" />
+
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.design.widget.CoordinatorLayout>

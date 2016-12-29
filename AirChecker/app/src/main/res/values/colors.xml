@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29be75</color>
+    <color name="colorPrimaryDark">#29be75</color>
+    <color name="colorAccent">#1ab41d</color>
+    <color name="aqi_excellent">#00e301</color>
+    <color name="aqi_good">#fdfd01</color>
+    <color name="aqi_lightly_polluted">#fd7e01</color>
+    <color name="aqi_moderately_polluted">#fd0001</color>
+    <color name="aqi_heavily_polluted">#98004c</color>
+    <color name="aqi_severely_polluted">#7d0023</color>
+    <color name="white">#FFFFFF</color>
+</resources>
